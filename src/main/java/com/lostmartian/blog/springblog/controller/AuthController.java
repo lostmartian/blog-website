@@ -1,5 +1,6 @@
 package com.lostmartian.blog.springblog.controller;
 
+import com.lostmartian.blog.springblog.dto.LoginRequest;
 import com.lostmartian.blog.springblog.dto.RegisterRequest;
 import com.lostmartian.blog.springblog.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,11 @@ public class AuthController {
     public ResponseEntity signup(@RequestBody RegisterRequest registerRequest) {
         authService.signup(registerRequest);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public void login(@RequestBody LoginRequest loginRequest) {
+
     }
 
 }
