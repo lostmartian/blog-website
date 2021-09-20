@@ -1,5 +1,6 @@
 package com.lostmartian.blog.springblog.service;
 
+import com.lostmartian.blog.springblog.dto.LoginRequest;
 import com.lostmartian.blog.springblog.dto.RegisterRequest;
 import com.lostmartian.blog.springblog.model.User;
 import com.lostmartian.blog.springblog.repository.UserRepository;
@@ -28,4 +29,6 @@ public class AuthService {
         return passwordEncoder.encode(password);
     }
 
+    public void login(LoginRequest loginRequest) {
+    }
 }
